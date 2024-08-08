@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${DATABASE_URL:}
-    username: ${DATABASE_USERNAME:}
-    password: ${DATABASE_PASSWORD:}
+    url: ${DATABASE_URL:jdbc:mysql://auction-db.cv0uw4swopxz.ap-southeast-1.rds.amazonaws.com/g_auction}
+    username: ${DATABASE_USERNAME:admin}
+    password: ${DATABASE_PASSWORD:BGTgkglFarU3eXj}
 
   jpa:
     hibernate:
@@ -16,8 +16,8 @@ spring:
   mail :
     host : smtp.gmail.com
     port : 587
-    username : ${MAIL_USERNAME:}
-    password : ${MAIL_PASSWORD:}
+    username : ${MAIL_USERNAME:dinhmanhbh03@gmail.com}
+    password : ${MAIL_PASSWORD:hchj rjca tpzg kwpn}
     properties:
       mail:
         smtp:
@@ -29,8 +29,8 @@ spring:
 #          writetimeout : 100
   data:
     redis:
-      host: localhost
-      port: 6379
+      host: ${SPRING_REDIS_HOST:localhost}
+      port: ${SPRING_REDIS_PORT:6379}
       ssl:
         enabled: true
   quartz:
@@ -47,9 +47,9 @@ spring:
 
 
 jwt:
-  signerKey: ${JWT_SIGNER_KEY:}
-  valid-duration: ${JWT_VALID_DURATION:}
-  refreshable-duration: ${JWT_REFRESH:}
+  signerKey: ${JWT_SIGNER_KEY:1TjXchw5FloESb63Kc+DFhTARvpWL4jUGCwfGWxuG5SIf/1y/LgJxHnMqaF6A/ij}
+  valid-duration: ${JWT_VALID_DURATION:300}
+  refreshable-duration: ${JWT_REFRESH:3600}
 
 server:
   port: 8080
@@ -60,8 +60,8 @@ websocket:
   endpoint: /ws
 
 cloudinary:
-  name: ${CLOUD_NAME:}
-  key: ${API_KEY:}
-  secret: ${API_SECRET:}
+  name: ${CLOUD_NAME:dorl0yxpe}
+  key: ${API_KEY:999929732961462}
+  secret: ${API_SECRET:DDuOOlQ5ewAOkgRjR5E1GawxXqc}
 
 alloworigins: http://localhost:3000
